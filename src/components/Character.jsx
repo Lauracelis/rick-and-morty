@@ -1,10 +1,9 @@
-export function Character(character) {
-    return (
-      <div className="text-center p-5">
-        <h3>{character.name}</h3>
-        <img src={character.image} alt={character.name} className="img-fluid rounded-pill" />
-        <p>{`Origin: ${character.origin && character.origin.name}`}</p>
-      </div>
-    );
-  }
-  export default Character;
+function Character(character){ //se recibe la información de la api como una prop y se aplica al componente
+    return(
+        <div>
+            <h2>{character.character.name}</h2>
+            <img src={character.character.image} alt={character.character.name}/>
+        </div>
+    )
+}
+export default Character

@@ -1,11 +1,14 @@
-import { CharacterList } from "./components/CharacterList";
-
-function App() {
-  return (
-    <div className="bg-dark text-white">
-      <h1 className="text-center display-1 py-4">Rick And Morty</h1>
-      <CharacterList />
+import CharacterList from "./components/CharacterList" //traer componente
+import './App.css'
+function App(){ //creación del componente inicial
+  return(
+    //se llama al componente characterLis el cual tiene todo el consumo de la api
+    <div>
+      <h1>rick and morty</h1> 
+      <CharacterList/>  
     </div>
-  );
+  )
 }
-export default App;
+
+//exportar el componente a pantalla
+export default App
