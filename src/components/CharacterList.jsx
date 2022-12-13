@@ -12,7 +12,7 @@ function CharacterList(){
     //se usa async al inicio de la función para declarar que estamos trabajando de forma asyncrona y asi poder usar await para esperar el retorno de la respuesta de la api y asi almacenarlo en algun lado
     async function apiresponse(){
        //fetch es una petición asyncrona por lo cual se espera que retorne algo (ese algo se capturara despues) por esto se usa AWAIT, que es para definir que la propusta es asyncrona (volviendo al algo que se capturara despues, ese algo lo almacenamos dentro de una const)
-    const response = await fetch(`https://rickandmortyapi.com/api/character`) //petición fetch hacia la api
+    const response = await fetch(`{https://rickandmortyapi.com/api/character}`) //petición fetch hacia la api
     
     //el objeto almacenado dentro de la const response es una promise (es dificil de leer, por lo que la transformaremos en un JSON para poder procesar los datos luego)
     const data = await response.json() //con esto convertirmos el objeto a json (tambien se coloca await ya que debe ser asyncrona)
@@ -34,5 +34,4 @@ function CharacterList(){
       </div>
     )
 }
-
 export default CharacterList;
